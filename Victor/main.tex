@@ -1,0 +1,106 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\sloppy
+
+\title{Latex Curso}
+\author{Geovana Lima, Reuben Claudino, Victor Pessoa Oliveira Ortins}
+
+\date{Março de 2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Introdução ao Documento Básico}
+
+Este é o nosso primeiro documento criado do zero. A estrutura básica de um arquivo \LaTeX{} é dividida em duas partes: o preâmbulo e o corpo do texto. Começamos sempre com a definição da classe do documento, que neste caso é um artigo. 
+
+O cabeçalho e as informações iniciais, como título, autores e data, foram configurados no preâmbulo. Para que essas informações apareçam renderizadas na página, utilizamos um comando específico logo após iniciar o documento.
+
+\section{Parágrafos e Formatação de Texto}
+
+Escrever no \LaTeX{} exige entender como ele processa o texto. Para criar um novo parágrafo, não basta apertar "Enter" uma vez; é necessário deixar uma linha completamente em branco no código.
+
+Também podemos aplicar estilos diretos ao texto para destacar informações. Por exemplo, podemos deixar uma palavra em \textbf{negrito} ou aplicar o estilo \textit{itálico}. O compilador se encarrega de aplicar a formatação sem que precisemos selecionar o texto com o mouse.
+
+\section{Matemática e Equações}
+
+O grande poder desta ferramenta está na escrita matemática. Podemos inserir fórmulas no meio do texto, colocando os elementos entre cifrões. Um exemplo clássico é a equação da equivalência massa-energia: $E = mc^2$.
+
+Se precisarmos que a equação ganhe destaque e seja numerada, utilizamos ambientes específicos, como o ambiente de equação. Veja o exemplo de uma função polinomial abaixo:
+
+\begin{equation}
+f(x) = x^2 + 2x - 3
+\end{equation}
+
+Dessa forma, construímos estruturas complexas mantendo uma formatação padronizada e profissional.
+
+\section{Imagens}
+
+Para colocar imagens em um documento Latex utilizamos a tag \textit{figure}. Nela, podemos definir a escala da imagem (seu tamanho em comparação ao tamanho da página), escolher o arquivo da imagem e colocar a legenda
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.1]{Flamengo-RJ.png}
+  \caption{Uma vez Flamengo, sempre Flamengo.}
+\end{figure}
+
+\section{Tabelas}
+
+A fim de inserir tabelas no latex, é preciso utilizar a tag \textit{tabular} e preencher os dados da tabela
+
+\begin{table}[h]
+    \centering
+    \caption{Exemplo}
+    \label{Tabela_Flamengo2}
+    \begin{tabular}{llcc}
+      \toprule
+      Atleta & Gols & Assistências \\ \hline
+      Arrascaeta & 12 & 5 \\
+      ER7 & 8 & 10 \\ \hline
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \caption{Artilheiros do Flamengo}
+    \label{Tabela_Flamengo}
+    \begin{tabular}{llcc}
+      \toprule
+      Atleta & Gols & Assistências \\ \hline
+      Gabigol & 12 & 5 \\
+      Bruno Henrique & 8 & 10 \\ \hline
+    \end{tabular}
+\end{table}
+
+\section{Referências}
+
+Podemos também referenciar elementos anteriores do texto, se eles foram identificados pela tag \textit{label}. Caso tenham sido, é só utilizar a tag \textit{ref} e referenciar o label textual dado pelo escritor. Não há necessidade, então, de atualizar manualmente os números de tabelas/imagens ao inserir novos elementos durante o texto. Segue exemplo abaixo:
+
+Como mostrado na tabela \ref{Tabela_Flamengo}, Gabigol é o artilheiro do Flamengo com 12 gols
+
+
+\section{Bibliografia e Sumário}
+
+É sempre possível adicionar citações ao seu documento. Idealmente, uma citação é feita no meio do texto e no final do artigo ela será devidamente adicionada. Para isso, crie um arquivo chamado referencias.bib e centralize lá suas referências. Uma citação é feita utilizando a tag \textit{cite}. É preciso também adicionar uma tag \textit{bibliography} com o nome do arquivo criado para centralizar as referências (nesse caso, referencias).
+
+Referências de artigos podem ser facilmente exportadas na maioria dos sites agregadores de artigos. É só colocar no arquivod e referencias que ela já pode ser utilizada
+
+O detector de faces RetinaFace foi introduzido inicialmente no artigo \cite{RetinaFacePaper:2019}, em que este modelo atingiu o estado de arte no que tange a área de detecção de faces
+
+É possível também adicionar um sumário onde desejado no texto
+
+\tableofcontents
+
+
+\bibliographystyle{plain}
+\bibliography{referencias}
+
+
+
+
+\end{document}
+
