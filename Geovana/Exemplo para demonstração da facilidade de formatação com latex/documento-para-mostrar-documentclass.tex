@@ -1,0 +1,23 @@
+% EXPERIMENTE TROCAR 'article' por 'report' na linha abaixo:
+\documentclass[12pt]{report} 
+
+\title{Diferenças de Classe no LaTeX}
+\author{Seu Nome}
+\date{\today}
+
+\begin{document}
+
+\maketitle % Gera o título. No 'article' fica no topo da página; no 'report' ganha uma página inteira.
+
+\section{Introdução}
+Este é um documento simples. Se a classe for 'article', este texto aparece logo abaixo do título.
+
+% O comando abaixo funciona no 'report', mas causaria erro no 'article':
+% \chapter{Primeiro Grande Tópico} 
+
+\section{Desenvolvimento}
+Note como o LaTeX numera as seções automaticamente. 
+
+A equação de Einstein, $E=mc^2$, mantém sua elegância independente da classe escolhida, pois o conteúdo matemático é universal.
+
+\end{document}

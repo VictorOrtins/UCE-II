@@ -1,0 +1,76 @@
+\documentclass[12pt, a4paper]{article}
+
+% --- Pacotes Básicos ---
+\usepackage[utf8]{inputenc}		% Codificação do documento
+\usepackage[T1]{fontenc}		% Seleção de códigos de fonte
+\usepackage[brazil]{babel}		% Idioma do documento
+\usepackage{geometry}			% Ajuste de margens
+
+% --- Configuração de Margens ABNT ---
+\geometry{
+    a4paper,
+    left=3cm,
+    top=3cm,
+    right=2cm,
+    bottom=2cm
+}
+
+\begin{document}
+% --- CAPA ---
+\begin{titlepage}
+    \begin{center}
+        % 1. Nome da Instituição
+        {\large \textbf{NOME DA UNIVERSIDADE OU INSTITUIÇÃO}} \\
+        {\large \textbf{NOME DO CENTRO OU FACULDADE}} \\
+        {\large \textbf{NOME DO CURSO DE GRADUAÇÃO}}
+        
+        \vspace{4cm} % Espaçamento vertical
+        
+        % 2. Nome do Autor
+        {\large \textbf{NOME DO AUTOR DO TRABALHO}}
+        
+        \vfill % Empurra o título para o centro da página
+        
+        % 3. Título do Trabalho
+        {\LARGE \textbf{TÍTULO DO TRABALHO:}}\\
+        {\Large \textbf{Subtítulo (se houver)}}
+        
+        \vfill % Empurra o local e ano para o fim da página
+        
+        % 4. Local e Ano
+        {\large \textbf{CIDADE - ESTADO}} \\
+        {\large \textbf{2026}}
+        
+    \end{center}
+\end{titlepage}
+
+% --- FOLHA DE ROSTO ---
+\newpage
+\begin{center}
+    % Nome do Autor
+    {\large \textbf{NOME DO AUTOR DO TRABALHO}}
+    
+    \vspace{4cm}
+    
+    % Título
+    {\LARGE \textbf{TÍTULO DO TRABALHO}}
+    
+    \vspace{2cm}
+    
+    % Natureza do Trabalho (O famoso "textinho" à direita)
+    \hspace{.45\textwidth} % Move o texto para a metade da página
+    \begin{minipage}{.5\textwidth}
+        Trabalho de Conclusão de Curso apresentado ao Curso de [Nome do Curso] da [Nome da Instituição], como requisito parcial para obtenção do título de Bacharel/Licenciado em [Área].
+        
+        \vspace{0.5cm}
+        \textbf{Orientador:} Prof. Dr. Nome do Orientador
+    \end{minipage}
+
+    \vfill
+    
+    % Local e Ano
+    {\large \textbf{CIDADE - ESTADO}} \\
+    {\large \textbf{2026}}
+
+\end{center}
+\end{document}
